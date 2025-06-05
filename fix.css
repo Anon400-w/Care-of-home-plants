@@ -1,0 +1,126 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Импорт шрифта Minecraftia */
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('/fonts/minecraftia.ttf'); /* укажите точный путь к файлу шрифта */
+}
+
+body {
+    font-family: 'Minecraftia', sans-serif; /* устанавливаем шрифт Minecraftia */
+    background: linear-gradient(to bottom right, #defdd8, #f7fafc);
+    color: #343a40;
+    line-height: 1.6;
+    font-size: 1.5rem; /* увеличим размер шрифта для удобства просмотра */
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.header {
+    background-color: #356c39;
+    text-align: center;
+    padding: 1em 0;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), color 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+nav a:hover {
+    color: #46c248;
+    transform: scale(1.1);
+}
+
+/* Оформление разделов с анимацией */
+.category-section {
+    background-color: #4aa758;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.category-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.category-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.plant-detail {
+    margin-bottom: 1.5rem;
+}
+
+.plant-detail h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#back-to-top {
+    display: inline-block;
+    float: right;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #356c39;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#back-to-top:hover {
+    color: #5eb75f;
+}
+
+footer {
+    background-color: #356c39;
+    padding: 1em 0;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

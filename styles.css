@@ -1,0 +1,155 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #defdd8, #f7fafc);
+    color: #343a40;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.header {
+    background-color: #356c39;
+    text-align: center;
+    padding: 1em 0;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), color 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+nav a:hover {
+    color: #46c248;
+    transform: scale(1.1);
+}
+
+/* Оформление разделов с анимацией */
+.section-category {
+    background-color: #52a75f;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section-category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.section-category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.start-quiz-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: rgb(41, 40, 40);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.start-quiz-btn:hover {
+    background-color: #3ab43e;
+}
+
+.category-list {
+    columns: 3;
+    column-gap: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.category-list li {
+    break-inside: avoid;
+    padding-bottom: 0.5rem;
+}
+
+.tip-list {
+    counter-reset: tip-count;
+    list-style: none;
+    padding-left: 0;
+}
+
+.tip-list li {
+    counter-increment: tip-count;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-list li::before {
+    content: counter(tip-count) ".";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #356c39;
+}
+
+.developer-list li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #356c39;
+    padding: 1em 0;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    section::before,
+    section::after {
+        display: none;
+    }
+
+    .category-list {
+        columns: 2;
+    }
+}

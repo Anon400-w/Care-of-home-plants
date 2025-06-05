@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Какой домашний цветок подойдёт вам?</title>
+    <link rel="stylesheet" href="quiz-styles.css">
+</head>
+<body>
+    <h1>Какой домашний цветок подойдёт вам?</h1>
+    <form id="quiz-form">
+        <label for="light-condition">1. Сколько света у вас в квартире/дома?</label>
+        <select id="light-condition" required>
+            <option value="">Выберите...</option>
+            <option value="sunny">Много естественного света</option>
+            <option value="partial-shade">Частичная тень</option>
+            <option value="shady">Темное помещение</option>
+        </select>
+
+        <br><br>
+
+        <label for="water-frequency">2. Насколько часто готовы поливать растение?</label>
+        <select id="water-frequency" required>
+            <option value="">Выберите...</option>
+            <option value="daily">Ежедневно</option>
+            <option value="weekly">Один раз в неделю</option>
+            <option value="rarely">Редко (раз в месяц или реже)</option>
+        </select>
+
+        <br><br>
+
+        <label for="space-availability">3. Есть ли свободное пространство для большого растения?</label>
+        <select id="space-availability" required>
+            <option value="">Выберите...</option>
+            <option value="large-space">Да, много места</option>
+            <option value="small-space">Нет, места мало</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Показать результат">
+    </form>
+
+    <div id="result"></div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
